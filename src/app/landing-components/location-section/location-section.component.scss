@@ -1,0 +1,178 @@
+.facilities-location-section {
+  position: relative;
+  padding: 150px 10%; /* Incrementa el padding superior e inferior */
+  font-family: "Bricolage Grotesque", sans-serif;
+  overflow: hidden; /* Restringe el contenido dentro del contenedor */
+
+  /* SVG de fondo */
+  .background-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Envía el SVG detrás */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 500%; /* Ajusta el tamaño para cubrir el fondo */
+      height: auto;
+      max-height: 150%; /* Restringe la altura al contenedor */
+      transform: translate(-42%, 10%); /* Ajusta la posición para centrar */
+    }
+  }
+
+  .section-header {
+    text-align: center;
+
+    h1 {
+        font-size: 3rem;
+        margin: 10px 0;
+        line-height: 1.2;
+        font-weight:bolder;
+        color: #4FD190;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+  }
+
+  #carouselExampleFade {
+    position: relative;
+    z-index: 1;
+    max-width: 800px; /* Reduce el tamaño del carrusel */
+    margin: 0 auto; /* Centra el carrusel */ 
+
+    .carousel-inner {
+      border-radius: 20px; /* Bordes redondeados para las imágenes */
+      overflow: hidden; /* Evita que las imágenes sobresalgan del contenedor */
+    }
+
+    .carousel-item {
+      img {
+        width: 100%; /* Asegura que las imágenes ocupen todo el ancho del carrusel */
+        height: auto; /* Mantiene la proporción de las imágenes */
+        display: block;
+        object-fit: contain; /* Ajusta las imágenes para que no pierdan calidad */
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      &.active {
+        opacity: 1; /* Imagen activa completamente visible */
+      }
+
+      &.next,
+      &.prev {
+        opacity: 0; /* Imágenes no visibles durante el cambio */
+      }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%; /* Reduce el ancho de los botones */
+      filter: drop-shadow(
+        0 2px 4px rgba(0, 0, 0, 0.5)
+      ); /* Añade sombra a los controles */
+      color: #2ba573;
+
+      span {
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Fondo semi-transparente para los controles */
+        border-radius: 50%; /* Forma circular */
+        padding: 10px; /* Espaciado interno */
+      }
+    }
+
+    .carousel-indicators {
+      bottom: 0px; /* Posiciona los indicadores más abajo */
+      display: flex;
+      justify-content: center;
+      gap: 10px; /* Espaciado entre indicadores */
+
+      .active {
+        background-color: #2ba573; /* Indicador activo con color personalizado */
+      }
+
+      span {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ccc; /* Indicadores inactivos */
+        transition: background-color 0.3s ease; /* Transición suave en hover */
+        cursor: pointer;
+
+        &:hover {
+          background-color: #4fd190; /* Color de hover */
+        }
+      }
+    }
+  }
+
+  .location-section {
+    padding-top: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté delante del SVG */
+
+    .map-container {
+      flex: 1;
+      max-width: 45%;
+      border: none; /* Elimina el borde */
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+
+      iframe {
+        height: 300px; /* Mantén la altura del mapa */
+      }
+    }
+
+    .location-info {
+      flex: 1;
+      max-width: 50%;
+      padding-left: 20px;
+
+      h3 {
+        font-size: 2rem;
+        color: #4fd190;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .location-content {
+      flex-direction: column;
+
+      .map-container,
+      .location-info {
+        max-width: 100%;
+      }
+
+      .location-info {
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+  }
+}

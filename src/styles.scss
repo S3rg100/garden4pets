@@ -1,3 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "primeicons/primeicons.css";
+
+body {
+  font-family: "Bricolage Grotesque", sans-serif; /* Tu fuente preferida */
+  color: #333; /* Color de texto por defecto */
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+@mixin title-style-green {
+  font-size: 3rem;
+  margin: 10px 0;
+  line-height: 1.2;
+  font-weight: bolder;
+  color: #4fd190;
+}
