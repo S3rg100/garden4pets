@@ -1,75 +1,79 @@
 .about-section {
-    background-color: #ffffff; /* Fondo claro */
-    padding: 120px 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Bricolage Grotesque, serif;
+  background-color: #ffffff; /* Fondo claro */
+  padding: 120px 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Bricolage Grotesque, serif;
 
-    h1 {
-        font-size: 3rem;
-        margin: 10px 0;
-        line-height: 1.2;
-        font-weight:bolder;
-        color: #4FD190;
-      }
-  
-    .about-container {
+  h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+    line-height: 1.2;
+    font-weight: bolder;
+    color: #4FD190;
+  }
+
+  .about-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que se adapte en pantallas pequeñas */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+
+    .about-image {
+      flex: 1;
       display: flex;
-      flex-wrap: wrap; /* Permite que se adapte en pantallas pequeñas */
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      max-width: 1200px;
-  
-      .about-image {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-  
-        img {
-          width: 300px;
-          height: auto;
-          border-radius: 50%; /* Hace la imagen circular */
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-          background-color: #ffa500; /* Fondo naranja */
-          padding: 10px; /* Espaciado interno */
-        }
-      }
-  
-      .about-content {
-        flex: 2;
-        margin-left: 40px;
-  
-        p {
-          font-size: 1rem;
-          line-height: 1.8;
-          color: #333;
-          margin-bottom: 20px;
-  
-          strong {
-            color: #4FD190; /* Resaltar con verde */
-            font-weight: bold;
-          }
-        }
+
+      img {
+        width: 500px; /* Tamaño más grande */
+        height: auto;
+        object-fit: cover; /* Asegura que la imagen mantenga su proporción */
       }
     }
-  
-    /* Responsividad */
-    @media (max-width: 768px) {
-      .about-container {
-        flex-direction: column;
-        text-align: center;
-  
-        .about-content {
-          margin-left: 0;
-          margin-top: 20px;
-        }
-  
-        .about-image img {
-          width: 250px; /* Ajusta el tamaño en pantallas pequeñas */
+
+    .about-content {
+      flex: 2;
+      margin-left: 40px;
+
+      p {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 20px;
+
+        strong {
+          color: #4FD190; /* Resaltar con verde */
+          font-weight: bold;
         }
       }
     }
   }
-  
+
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+
+      .about-content {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+
+      .about-image img {
+        width: 300px; /* Ajusta el tamaño en pantallas pequeñas */
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-container {
+      .about-image img {
+        width: 250px; /* Ajusta el tamaño en pantallas muy pequeñas */
+      }
+    }
+  }
+}

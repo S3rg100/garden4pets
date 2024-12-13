@@ -10,19 +10,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Inicio</a>
+            <a class="nav-link" [class.active]="isActive('hero')" href="#hero">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#nosotros">Sobre Nosotros</a>
+            <a class="nav-link" [class.active]="isActive('nosotros')" href="#nosotros">Sobre Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#servicios">Nuestros Servicios</a>
+            <a class="nav-link" [class.active]="isActive('servicios')" href="#servicios">Nuestros Servicios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#instalaciones">Instalaciones</a>
+            <a class="nav-link" [class.active]="isActive('instalaciones')" href="#instalaciones">Instalaciones</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contacto">Contacto</a>
+            <a class="nav-link" [class.active]="isActive('contacto')" href="#contacto">Contacto</a>
           </li>
         </ul>
       </div>
