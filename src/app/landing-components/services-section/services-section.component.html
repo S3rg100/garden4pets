@@ -1,0 +1,12 @@
+<section class="services-section" id="servicios">
+    <h1>Nuestros Servicios</h1>
+    <div class="services-container">
+      <app-service-card
+        *ngFor="let servicio of servicios"
+        [icono]="servicio.icono"
+        [titulo]="servicio.titulo"
+        [descripcion]="servicio.descripcion"
+        [botonTexto]="servicio.botonTexto">
+      </app-service-card>
+    </div>
+  </section>

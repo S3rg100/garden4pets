@@ -1,0 +1,125 @@
+/* General del header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%; /* Reduce el espacio de los lados */
+  background-color: #008b8b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Estilo para el logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  gap: 10px;
+
+  img.LogoPrincipal {
+    width: 100px; /* Aumenta el tamaño */
+    height: auto; /* Mantiene la proporción original */
+  }
+
+  span {
+    font-size: 1.8rem; /* Ajusta el tamaño del texto del logo */
+    color: white;
+  }
+}
+
+/* Estilo del navbar */
+nav {
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Ajusta el espacio entre los elementos del menú */
+    margin: 0;
+    padding: 0;
+
+    li {
+      .nav-link {
+        position: relative; /* Necesario para posicionar el pseudo-elemento */
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 5px 10px;
+      
+        &:hover {
+          color: #ff9459; /* Cambia a dorado al pasar el ratón */
+        }
+      
+        
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #ff9459;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.3s ease;
+        }
+      
+        &.active::before {
+          transform: scaleX(1); /* Expande la línea de derecha a izquierda */
+        }
+      }
+    }
+  }
+}
+
+/* Botones de autenticación */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  a {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+
+    &.login {
+      color: #008b8b; /* Texto del botón "Iniciar Sesión" */
+      background-color: white;
+      border: 1px solid #008b8b;
+
+      &:hover {
+        background-color: #005f5f; /* Hover para un efecto más oscuro */
+        color: white;
+      }
+    }
+
+    &.register {
+      background-color: #ffd700; /* Color del botón "Portal Interno" */
+      color: #008b8b;
+      border: none;
+
+      &:hover {
+        background-color: #ffa500; /* Hover para un efecto más anaranjado */
+        color: white;
+      }
+    }
+  }
+}
+
+/* Scroll y animaciones suaves */
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.aos-animate {
+  will-change: transform, opacity;
+}
