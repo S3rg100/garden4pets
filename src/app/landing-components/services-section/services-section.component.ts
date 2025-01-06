@@ -19,20 +19,20 @@ export class ServicesSectionComponent {
     },
     {
       icono: 'fas fa-home',
-      titulo: 'Estadía Nocturna',
-      descripcion: 'En nuestra Estadía Nocturna, tu mascota descansará en un entorno seguro y cómodo, bajo la supervisión de nuestro equipo para su tranquilidad y la tuya.',
+      titulo: 'Estadía Diurna',
+      descripcion: 'En nuestra Estadía Diurna, tu mascota descansará en un entorno seguro y cómodo, bajo la supervisión de nuestro equipo para tu tranquilidad.',
       botonTexto: 'Conocer más',
     },
     {
       icono: 'fas fa-dog',
       titulo: 'Estadía Completa',
-      descripcion: 'Un paquete completo para que tu perro pase todo el día y la noche en un entorno seguro y cómodo, con atención y cuidado garantizados.',
+      descripcion: 'Este plan completo para que tu perro pase todo el día y la noche en un entorno seguro y cómodo, con atención y cuidado garantizados.',
       botonTexto: 'Conocer más',
     },
     {
-      icono: 'fas fa-shuttle-van',
-      titulo: 'Guardería con Transporte',
-      descripcion: '¿No puedes llevar a tu peludo? No te preocupes, este servicio incluye la recogida y entrega de tu perro directamente en tu domicilio.',
+      icono: 'fas fa-solid fa-umbrella-beach',
+      titulo: 'Plan Fin de Semana',
+      descripcion: 'Este plan permite a los dueños dejar a sus perros en la guardería durante el fin de semana completo.',
       botonTexto: 'Conocer más',
     }
   ];
