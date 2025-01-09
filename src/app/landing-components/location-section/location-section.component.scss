@@ -1,26 +1,53 @@
 .facilities-location-section {
+  background: linear-gradient(
+    to bottom,
+    rgba(248, 117, 55, 1),
+    rgba(251, 168, 31, 1)
+  );
   position: relative;
   padding: 150px 10%; /* Incrementa el padding superior e inferior */
   font-family: "Bricolage Grotesque", sans-serif;
   overflow: hidden; /* Restringe el contenido dentro del contenedor */
 
   /* SVG de fondo */
-  .background-svg {
+  .custom-shape-divider-top-1736266717 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 0; /* Envía el SVG detrás */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    line-height: 0;
 
     svg {
-      width: 500%; /* Ajusta el tamaño para cubrir el fondo */
-      height: auto;
-      max-height: 150%; /* Restringe la altura al contenedor */
-      transform: translate(-42%, 10%); /* Ajusta la posición para centrar */
+      position: relative;
+      display: block;
+      width: calc(153% + 1.3px);
+      height: 150px;
+    }
+
+    .shape-fill {
+      fill: #ffffff;
+    }
+  }
+
+  .custom-shape-divider-bottom-1736267479 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+    svg {
+      position: relative;
+      display: block;
+      width: calc(109% + 1.3px);
+      height: 120px;
+    }
+
+    .shape-fill {
+      fill: #ffffff;
     }
   }
 
@@ -28,16 +55,16 @@
     text-align: center;
 
     h1 {
-        font-size: 3rem;
-        margin: 10px 0;
-        line-height: 1.2;
-        font-weight:bolder;
-        color: #4FD190;
+      font-size: 3rem;
+      margin: 10px 0;
+      line-height: 1.2;
+      font-weight: bolder;
+      color: #ffffff;
     }
 
     p {
       font-size: 1rem;
-      color: #555;
+      color: #ffffff;
       line-height: 1.6;
       max-width: 1200px;
       margin: 0 auto 40px;
@@ -48,7 +75,7 @@
     position: relative;
     z-index: 1;
     max-width: 800px; /* Reduce el tamaño del carrusel */
-    margin: 0 auto; /* Centra el carrusel */ 
+    margin: 0 auto; /* Centra el carrusel */
 
     .carousel-inner {
       border-radius: 20px; /* Bordes redondeados para las imágenes */
@@ -80,14 +107,14 @@
       filter: drop-shadow(
         0 2px 4px rgba(0, 0, 0, 0.5)
       ); /* Añade sombra a los controles */
-      color: #2ba573;
+      color: #ffffff;
 
       span {
         background-color: rgba(
           0,
           0,
           0,
-          0.5
+          0
         ); /* Fondo semi-transparente para los controles */
         border-radius: 50%; /* Forma circular */
         padding: 10px; /* Espaciado interno */
@@ -95,13 +122,13 @@
     }
 
     .carousel-indicators {
-      bottom: 0px; /* Posiciona los indicadores más abajo */
+      bottom: -40px; /* Posiciona los indicadores más abajo */
       display: flex;
       justify-content: center;
       gap: 10px; /* Espaciado entre indicadores */
 
       .active {
-        background-color: #2ba573; /* Indicador activo con color personalizado */
+        background-color: #ffffff; /* Indicador activo con color personalizado */
       }
 
       span {
@@ -113,7 +140,7 @@
         cursor: pointer;
 
         &:hover {
-          background-color: #4fd190; /* Color de hover */
+          background-color: #ffffff; /* Color de hover */
         }
       }
     }
@@ -148,13 +175,13 @@
 
       h3 {
         font-size: 2rem;
-        color: #4fd190;
+        color: #ffffff;
         margin-bottom: 15px;
       }
 
       p {
         font-size: 1rem;
-        color: #555;
+        color: #ffffff;
         line-height: 1.6;
       }
     }

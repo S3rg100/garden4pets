@@ -6,6 +6,7 @@ import { FooterSectionComponent } from "./landing-components/footer-section/foot
 import { AboutUsSectionComponent } from "./landing-components/about-us-section/about-us-section.component";
 import { ServicesSectionComponent } from "./landing-components/services-section/services-section.component";
 import { LocationSectionComponent } from "./landing-components/location-section/location-section.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-root',

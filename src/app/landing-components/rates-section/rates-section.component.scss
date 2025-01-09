@@ -37,7 +37,7 @@
       h3 {
         font-size: 1.5rem;
         margin-bottom: 10px;
-        color: #4fd190;
+        color: #333;
 
         .highlight {
           color: #ffa500;
@@ -71,6 +71,10 @@
           .price {
             font-weight: bold;
             color: #4fd190;
+          }
+
+          .indent {
+            margin-left: 20px;
           }
         }
       }

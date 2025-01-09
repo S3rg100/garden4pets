@@ -22,11 +22,12 @@
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.4",
     "@popperjs/core": "^2.11.8",
+    "@primeng/themes": "^19.0.2",
     "bootstrap": "^5.3.3",
     "express": "^4.18.2",
     "garden4pets": "file:",
     "primeicons": "^7.0.0",
-    "primeng": "^17.18.12",
+    "primeng": "^17.18.15",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
