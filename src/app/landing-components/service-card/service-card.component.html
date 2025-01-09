@@ -4,5 +4,18 @@
   </div>
   <h3>{{ titulo }}</h3>
   <p>{{ descripcion }}</p>
-  <button>{{ botonTexto }}</button>
+  <button (click)="showDialog()">{{ botonTexto }}</button>
+
+
 </div>
+
+<p-dialog header="Detalles del Servicio" [modal]="true" [(visible)]="visible" [style]="{ width: '50rem', background: '#ffffff' }" [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }">
+  <p class="sb-8">Incluye:</p>
+  <ul>
+    <li *ngFor="let item of incluye">{{ item }}</li>
+  </ul>
+  <p class="sb-8">Ideal para:</p>
+  <p class="mb-8">{{ idealPara }}</p>
+  <p class="sb-8">Frecuencia:</p>
+  <p>{{ frecuencia }}</p>
+</p-dialog>

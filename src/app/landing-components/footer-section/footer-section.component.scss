@@ -1,7 +1,7 @@
 .footer {
     background-color: #008b8b; /* Color de fondo */
     color: white;
-    padding: 20px 20%;
+    padding: 20px 12%;
     font-family: Bricolage Grotesque, serif;
   
     .footer-container {
@@ -42,7 +42,7 @@
         &.social-media {
           .social-icons {
             display: flex;
-            justify-content:center;
+            justify-content:flex-start;
             gap: 15px;
   
             a {
