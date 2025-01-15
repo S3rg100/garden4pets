@@ -7,14 +7,69 @@
   text-align: center;
   transition: transform 0.3s ease;
   font-family: Bricolage Grotesque, serif;
-  min-height: 330px;
-  position: relative; // Añadido
-  display: flex; // Añadido
-  flex-direction: column; // Añadido
+  width: 100%; /* Ocupa todo el ancho disponible de su columna */
+  min-height: 350px;
+  height: 100%;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  &::before{
+    content: "";
+    background: linear-gradient(
+      45deg,
+      rgba(245, 96, 54, 1),
+      rgba(251, 168, 31, 1), 
+      rgba(252, 211, 77, 1), 
+      rgba(248, 117, 55, 1),
+      rgba(250, 128, 114, 1)
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+    animation: glowing 20s linear infinite;
+  }
+
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 100%;
+    }
+    100% {
+      background-position: 0 0;
+    }
+    
+  }
 
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 
   .icon {
@@ -24,8 +79,7 @@
   }
 
   h3 {
-    font-size: 1.5rem;
-    
+    font-size: 1.5rem; 
     color: #333;
     margin-bottom: 15px;
   }
@@ -76,11 +130,13 @@
         font-weight: 600;
         font-family: "Bricolage Grotesque", sans-serif;
       }
-
-      .p-dialog-header-icons {
-        &:hover {
-          background: rgba(5, 147, 230, 0.1);
-        }
+      .p-dialog-header-close {
+        background-color: transparent !important; /* Hace el fondo transparente */
+        border: none !important; /* Elimina cualquier borde */
+        box-shadow: none !important; 
+      }
+      .p-dialog-header-close-icon {
+        color: #ffffff; 
       }
     }
 
